@@ -19,9 +19,12 @@ class DogSerializer(serializers.HyperlinkedModelSerializer):
         fields = (
             'url',
             'name',
+            'age',
             'breedName',
-            'created',
-            'age'
+            'color',
+            'favoritefood',
+            'favoritetoy',
+            'gender'
            
             )
 
@@ -33,8 +36,11 @@ class BreedSerializer(serializers.HyperlinkedModelSerializer):
         fields = (
                 'url',
                 'breedName',
-                'temperment',
-                'lifespan',
+                'size',
+                'exerciseneeds',
+                'friendliness',
+                'sheddingamount',
+                'trainability'
                 
                 )
 
