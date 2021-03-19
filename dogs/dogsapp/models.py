@@ -6,7 +6,10 @@ class Breed(models.Model):
     
     breedName = models.CharField(max_length=200, unique=True)
     temperment = models.CharField(max_length=200, unique=False)
-    lifespan = models.CharField(max_length=2, unique=False)
+    lifespan = models.CharField(max_length=200, unique=False)
+    
+    def __str__(self):
+        return self.breedName
     
 class Dog(models.Model):
 
@@ -14,3 +17,6 @@ class Dog(models.Model):
     breedName = models.ForeignKey(Breed, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=False)
     age = models.CharField(max_length=200, unique=False)    
+    
+    def __str__(self):
+        return self.name
